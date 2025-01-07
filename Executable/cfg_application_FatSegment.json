@@ -1,0 +1,291 @@
+{
+	"cfg_application_version": "0.6.0",
+	"applicationName": "FatSegment",
+	"datFileSearchString": [
+		"*FatSegment_data*.mat",
+		"*Fat_data*.mat",
+		"*FatPig_data*.mat",
+		"*_data*.mat"
+	],
+	"lastLoadPath": "C:\\Users\\StangeR\\MATLAB\\FAT\\ModeratePatients\\Reussner_Kerstin_4_150409",
+	"imgNames": [
+		"InPhase",
+		"OutPhase"
+	],
+	"standardImgType": "InPhase",
+	"imgSearchName": [
+		[
+			"*InPhase*Mg*.dcm",
+			"*InPhase*.dcm",
+			"*.dcm"
+		],
+		[
+			"*OutPhase*Mg*.dcm",
+			"*OutPhase*.dcm",
+			"*.dcm"
+		]
+	],
+	"imgSearchDir": [
+		[
+			"*InPhase*"
+		],
+		[
+			"*OutPhase*"
+		]
+	],
+	"imgAxis": {
+		"visible": "on",
+		"height": 0.75
+	},
+	"graphAxis": {
+		"visible": "on",
+		"height": 0.25,
+		"xBorderGap": [30,15],
+		"yBorderGap": [50,2]
+	},
+	"textBox": {
+		"visible": "on",
+		"height": 0.25
+	},
+	"color1": [1,0,0],
+	"color2": [0,0,1],
+	"color3": [0,1,0],
+	"color4": [0,0.45,0.74],
+	"color5": [0.85,0.33,0.1],
+	"color6": [0.93,0.69,0.13],
+	"color7": [0.49,0.18,0.56],
+	"color8": [0.47,0.67,0.19],
+	"color9": [0.3,0.75,0.93],
+	"cComputeFcn": "cComputeFatSegment",
+	"imgFcn": "cImageDcm",
+	"saveDatFcn": [
+		"oCont.oComp.mSaveXls(oCont)"
+	],
+	"closeRequestFcn": "oCont.oComp.mCloseReq(oCont)",
+	"segProps": {
+		"name": "RS_BodyBounds",
+		"magThreshold": 8
+	},
+	"imageDisplayMode": "Water only",
+	"sliceSpacingInterpolationDistance": 10.5,
+	"tableSelAutoSegment": 0,
+	"menu": [
+		{
+			"path": [
+				"Image Display",
+				"Image Mode",
+				"In Phase only"
+			],
+			"callback": "@oCont.mImageDisplayMode"
+		},
+		{
+			"path": [
+				"Image Display",
+				"Image Mode",
+				"Out Phase only"
+			],
+			"callback": "@oCont.mImageDisplayMode"
+		},
+		{
+			"path": [
+				"Image Display",
+				"Image Mode",
+				"Fat only"
+			],
+			"callback": "@oCont.mImageDisplayMode"
+		},
+		{
+			"path": [
+				"Image Display",
+				"Image Mode",
+				"Water only"
+			],
+			"callback": "@oCont.mImageDisplayMode"
+		},
+		{
+			"path": [
+				"FatFunctions",
+				"Auto Segment Image"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mAutoSegmentSingle(oCont))"
+		},
+		{
+			"path": [
+				"FatFunctions",
+				"Auto Segment All Images"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mAutoSegmentAll(oCont))"
+		},
+		{
+			"path": [
+				"FatFunctions",
+				"Visceral Bound from Inner Bound"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mVisceralFromInnerBound(oCont))"
+		},
+		{
+			"path": [
+				"FatFunctions",
+				"Find FatTheshold"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mFindThreshLvl(oCont))"
+		},
+		{
+			"path": [
+				"Functions",
+				"Copy Boundaries"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mCopyBound(oCont))"
+		},
+		{
+			"path": [
+				"Functions",
+				"Paste Boundaries"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mPasteBound(oCont))"
+		},
+		{
+			"path": [
+				"Functions",
+				"Contour Tracking ON\/OFF"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mContourTrackingONOFF(oCont))"
+		},
+		{
+			"path": [
+				"Experimental",
+				"Femur Box",
+				"Show Box"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mShowFemurBox(oCont))"
+		},
+		{
+			"path": [
+				"Experimental",
+				"Femur Box",
+				"Set Box"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mSetFemurBox(oCont))"
+		},
+		{
+			"path": [
+				"Experimental",
+				"Femur Box",
+				"Remove Box"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mDelFemurBox(oCont))"
+		},
+		{
+			"path": [
+				"Experimental",
+				"Femur Box",
+				"Save Box Results"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mSaveBoxResults(oCont))"
+		},
+		{
+			"path": [
+				"Experimental",
+				"Hemi FAT",
+				"Show Line"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mShowHemiLine(oCont))"
+		},
+		{
+			"path": [
+				"Experimental",
+				"Hemi FAT",
+				"Set Line"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mSetHemiLine(oCont))"
+		},
+		{
+			"path": [
+				"Experimental",
+				"Hemi FAT",
+				"Remove Line"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mDelHemiLine(oCont))"
+		},
+		{
+			"path": [
+				"Experimental",
+				"Hemi FAT",
+				"Save Hemi Results"
+			],
+			"callback": "@(varargin)oCont.mMenuCallback(@(oComp)oCont.oComp.mSaveHemiResults(oCont))"
+		}
+	],
+	"table": {
+		"columnName": [
+			"Pos",
+			"UseIt",
+			"SAT [cm^3]",
+			"VAT [cm^3]",
+			"WK",
+			"LM"
+		],
+		"associatedFieldNames": [
+			"pSliceLocation",
+			"pUseSlice",
+			"mVolumeSAT",
+			"mVolumeVAT",
+			"pLoc1",
+			"pLoc2"
+		],
+		"columnFormat": [
+			"numeric",
+			"logical",
+			"numeric",
+			"numeric",
+			[
+				"none",
+				"L5S1",
+				"L4L5",
+				"L3L4",
+				"L2L3",
+				"L1L2",
+				"B9"
+			],
+			[
+				"none",
+				"BB",
+				"FK",
+				"BN",
+				"ZF"
+			]
+		],
+		"columnEditable": [0,1,0,0,1,1],
+		"columnWidth": [35,40,75,75,55,55],
+		"visible": "on",
+		"height": 0.75
+	},
+	"key": {
+		"deleteContour": "escape",
+		"showVat": "v",
+		"contourTracking": "x"
+	},
+	"contour": {
+		"names": [
+			"outerBound",
+			"innerBound",
+			"visceralBound"
+		],
+		"colors": [
+			"yellow",
+			"blue",
+			"red"
+		],
+		"keyAssociation": [
+			"1",
+			"2",
+			"3"
+		],
+		"showFemurBox": 0,
+		"showHemiLine": 0,
+		"contourTracking": {
+			"enable": 1,
+			"size": 4
+		}
+	}
+}

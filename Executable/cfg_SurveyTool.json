@@ -1,0 +1,54 @@
+{
+	"cfgVersion": "0.1",
+	"programName": "Dicomflex - Survey Viewer",
+	"apperance": {
+		"borderWidth": 2,
+		"color1": [1,1,1],
+		"color2": [0,0,0],
+		"color3": [0.95,0.95,0.95],
+		"color4": [0,0.45,0.74],
+		"designColor1": [0.462,0.79,1],
+		"backGroundColor": [0.1,0.1,0.1],
+		"elementBorderColor": [0.231,0.395,0.5]
+	},
+	"imgAxis": {
+		"height": 1
+	},
+	"table": {
+		"ColumnName": [
+			"Image Number"
+		],
+		"ColumnFormat": [
+			"numeric"
+		],
+		"ColumnEditable": 0,
+		"ColumnWidth": [
+			90
+		],
+		"height": 0.5
+	},
+	"textbox": {
+		"visible": "on",
+		"height": 0.5
+	},
+	"menu": [
+		{
+			"path": [
+				"File",
+				"Load"
+			],
+			"callback": "@d.loadData"
+		},
+		{
+			"path": [
+				"File",
+				"Save"
+			],
+			"callback": "@d.saveData"
+		}
+	],
+	"GS1": 25,
+	"GS2": 7,
+	"minfH": 768,
+	"minfW": 1024
+}
