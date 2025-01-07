@@ -1,0 +1,164 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration file="C:\Users\Tobias Eggebrecht\Desktop\Programmierung\V1.29\SourceCode\DicomFlex.prj" location="C:\Users\Tobias Eggebrecht\Desktop\Programmierung\V1.29\SourceCode" name="DicomFlex" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>DicomFlex</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.0</param.version>
+    <param.authnamewatermark>Roland Stange &amp; Tobias Eggebrecht</param.authnamewatermark>
+    <param.email />
+    <param.company />
+    <param.summary />
+    <param.description />
+    <param.screenshot>C:\Users\Tobias Eggebrecht\Desktop\Programmierung\V1.29\splash.png</param.screenshot>
+    <param.guid />
+    <param.installpath.string>\DicomFlex\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo>C:\Users\Tobias Eggebrecht\Desktop\Programmierung\V1.29\splash.png</param.logo>
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\DicomFlex\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\DicomFlex\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\DicomFlex\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\DicomFlex</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.embed.ctf>true</param.embed.ctf>
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.embed.ctf />
+      <param.target.type />
+      <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\cControl.m</file>
+    </fileset.main>
+    <fileset.resources>
+      <file>${PROJECT_ROOT}\boundary.m</file>
+      <file>${PROJECT_ROOT}\boundaryFit.m</file>
+      <file>${PROJECT_ROOT}\cBoundary.m</file>
+      <file>${PROJECT_ROOT}\cBoundaryFit.m</file>
+      <file>${PROJECT_ROOT}\cCompute.m</file>
+      <file>${PROJECT_ROOT}\cCompute_segfatMR.m</file>
+      <file>${PROJECT_ROOT}\cCompute_template.m</file>
+      <file>${PROJECT_ROOT}\cComputeDummy.m</file>
+      <file>${PROJECT_ROOT}\cControl.m</file>
+      <file>${PROJECT_ROOT}\cfg_application_segfatMR.json</file>
+      <file>${PROJECT_ROOT}\cfg_framework.json</file>
+      <file>${PROJECT_ROOT}\cfg_SurveyTool.json</file>
+      <file>${PROJECT_ROOT}\checkBoundaryAppropriateness.m</file>
+      <file>${PROJECT_ROOT}\cImage.m</file>
+      <file>${PROJECT_ROOT}\cImageDcm.m</file>
+      <file>${PROJECT_ROOT}\ConfigApplication_template.m</file>
+      <file>${PROJECT_ROOT}\ConfigFramework_template.m</file>
+      <file>${PROJECT_ROOT}\DconvV2.m</file>
+      <file>${PROJECT_ROOT}\EvaluateTimeLogging.m</file>
+      <file>${PROJECT_ROOT}\FitTool.m</file>
+      <file>${PROJECT_ROOT}\GenerateSurveyToolCfg.m</file>
+      <file>${PROJECT_ROOT}\getProgrammPath.m</file>
+      <file>${PROJECT_ROOT}\img.m</file>
+      <file>${PROJECT_ROOT}\img2bwThresholding.m</file>
+      <file>${PROJECT_ROOT}\imgDcm.m</file>
+      <file>${PROJECT_ROOT}\imgFat.m</file>
+      <file>${PROJECT_ROOT}\isat.m</file>
+      <file>${PROJECT_ROOT}\jsonopt.m</file>
+      <file>${PROJECT_ROOT}\kmeans.m</file>
+      <file>${PROJECT_ROOT}\loadjson.m</file>
+      <file>${PROJECT_ROOT}\localMaximum.m</file>
+      <file>${PROJECT_ROOT}\makeLinePoints.m</file>
+      <file>${PROJECT_ROOT}\mergestruct.m</file>
+      <file>${PROJECT_ROOT}\pointDist.m</file>
+      <file>${PROJECT_ROOT}\region_seg.m</file>
+      <file>${PROJECT_ROOT}\regiongrowing.m</file>
+      <file>${PROJECT_ROOT}\RS_BodyBounds.m</file>
+      <file>${PROJECT_ROOT}\rsFitObj.m</file>
+      <file>${PROJECT_ROOT}\RSinnerBound.m</file>
+      <file>${PROJECT_ROOT}\RSouterBound.m</file>
+      <file>${PROJECT_ROOT}\savejson.m</file>
+      <file>${PROJECT_ROOT}\segfatMR.prj</file>
+      <file>${PROJECT_ROOT}\setStructArrayField.m</file>
+      <file>${PROJECT_ROOT}\struct2jdata.m</file>
+      <file>${PROJECT_ROOT}\subdir.m</file>
+      <file>${PROJECT_ROOT}\SurveyTool.m</file>
+      <file>${PROJECT_ROOT}\tabDat.m</file>
+      <file>${PROJECT_ROOT}\tabDatFatSegmentIOphase.m</file>
+      <file>${PROJECT_ROOT}\tabDatT1RelaxFitMRoi.m</file>
+      <file>${PROJECT_ROOT}\testMRS.m</file>
+      <file>${PROJECT_ROOT}\tmp_cControl.mat</file>
+      <file>${PROJECT_ROOT}\varargin2struct.m</file>
+      <file>${PROJECT_ROOT}\VolFatCompare.m</file>
+    </fileset.resources>
+    <fileset.package />
+    <fileset.depfun>
+      <file>C:\Users\Tobias Eggebrecht\Desktop\Programmierung\20200223_1_V1.33\SourceCode\NikitaFat160322Segmenting.m</file>
+      <file>C:\Users\Tobias Eggebrecht\Desktop\Programmierung\20200223_1_V1.33\SourceCode\NikitaFat161213Segmenting.m</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\DicomFlex\for_testing" name="splash.png" optional="false">C:\Users\Tobias Eggebrecht\Desktop\Programmierung\V1.29\SourceCode\DicomFlex\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\DicomFlex\for_testing" name="DicomFlex.exe" optional="false">C:\Users\Tobias Eggebrecht\Desktop\Programmierung\V1.29\SourceCode\DicomFlex\for_testing\DicomFlex.exe</file>
+      <file location="${PROJECT_ROOT}\DicomFlex\for_testing" name="readme.txt" optional="true">C:\Users\Tobias Eggebrecht\Desktop\Programmierung\V1.29\SourceCode\DicomFlex\for_testing\readme.txt</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2016b</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.2</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
